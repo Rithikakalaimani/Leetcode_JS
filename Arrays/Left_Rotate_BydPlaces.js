@@ -4,6 +4,7 @@ function rotate(nums, k) {
   reverse(nums, 0, n - k - 1);
   reverse(nums, n - k, n - 1);
   reverse(nums, 0, n - 1);
+  
 }
 
 function reverse(nums, i, j) {
