@@ -68,10 +68,6 @@ function getLongestSubarray(a, k) {
   return maxLen;
 }
 
-let a = [2, 3, 5, 1, 9];
-let k = 10;
-let len = getLongestSubarray(a, k);
-console.log("The length of the longest subarray is:", len);
 
 
 
