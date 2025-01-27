@@ -14,6 +14,7 @@
     }
   </style>
 </head>
+
 <body>
   <input type="text" onkeyup="getData()">
   <input type="text" onkeyup="betterFunction()">
@@ -24,6 +25,21 @@
     </div>
   </div>
 
+  <div>
+    <ul id="category">
+      <li id="laptop">laptop</li>
+      <li id="computer">Computer</li>
+      <li id="PC">PC</li>
+    </ul>
+  </div>
+
+  <div id="form">
+    <!-- rather than attaching the eventlistener to each element a behaviour is created and used  -->
+     <!-- attaching each and every event handlers would end hanging in the browser reduces the performance -->
+    <input type="text" id="name" data-uppercase>
+    <input type="text" id="pan">
+    <input type="text" id="mobile" data-uppercase>
+  </div>
 
 
 
@@ -38,5 +54,6 @@
    <script defer></script>
 
    <script src="./eventBubbling_capturing.js"></script>
+   <script src="./eventDeleagtion.js"></script>
 </body>
 </html>
