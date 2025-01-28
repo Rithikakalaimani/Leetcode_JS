@@ -23,3 +23,17 @@ multipyByFour();
 
 let multiplybyFive = multiply(5);
 multiplybyFive(10);
+
+function sum(a) {
+  // Return a function that takes the next argument
+  return function (b) {
+    if (b !== undefined) {
+      // Continue currying
+      return sum(a + b); // Accumulate the sum
+    } else {
+      // Final value when no argument is provided
+      return a;
+    }
+  };
+}
+console.log(sum(1)(2)(3)(4)()); // Output: 10
