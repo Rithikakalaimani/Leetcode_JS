@@ -1,0 +1,23 @@
+function throttle(func, limit) {
+  let inThrottle = false; // Flag to track whether the function is allowed to execute
+
+  return function (...args) {
+    if (!inThrottle) {
+      func.apply(this, args); // Execute the function
+      inThrottle = true; // Set flag to true
+
+      // Reset flag after 'limit' time
+      setTimeout(() => {
+        inThrottle = false;
+      }, limit);
+    }
+  };
+}
+
+// Usage: Throttles scroll event to execute once every 1 second
+window.addEventListener(
+  "scroll",
+  throttle(() => {
+    console.log("Throttled Scroll Event");
+  }, 1000)
+);
